@@ -223,6 +223,12 @@ Now that you have the right access rights to the Hardware Store BTP Application,
 ![UpdateXSUAA](images/001_BTP.png)
 7. Save the changes.
 8. In the terminal, run:
+   
+   ```bash
+   cf update-service xsuaa-service-tutorial -c ./security/xs-security.json
+   ```
+   followed by
+
    ```bash
    cf push
    ```
