@@ -1,0 +1,88 @@
+{
+	"xsappname": "product-list",
+	"tenant-mode": "dedicated",
+	"scopes": [
+	  {
+		"name": "$XSAPPNAME.force_read",
+		"description": "Allows Jedi to read the Holocrons."
+	  },
+	  {
+		"name": "$XSAPPNAME.force_edit",
+		"description": "Allows Sith to manipulate the archives."
+	  },
+	  {
+		"name": "$XSAPPNAME.force_admin",
+		"description": "Allows the Emperor to take control."
+	  },
+	  {
+		"name": "$XSAPPNAME.force_guest",
+		"description": "Allows Rebels to access public transmissions."
+	  }
+	],
+	"role-templates": [
+	  {
+		"name": "jedi_knight",
+		"description": "Access to Jedi knowledge.",
+		"scope-references": [
+		  "$XSAPPNAME.force_read"
+		]
+	  },
+	  {
+		"name": "sith_lord",
+		"description": "Ability to alter the Jedi archives.",
+		"scope-references": [
+		  "$XSAPPNAME.force_edit"
+		]
+	  },
+	  {
+		"name": "emperor",
+		"description": "Full control over the Galactic Empire.",
+		"scope-references": [
+		  "$XSAPPNAME.force_admin"
+		]
+	  },
+	  {
+		"name": "rebel_agent",
+		"description": "Access to public data of the Rebel Alliance.",
+		"scope-references": [
+		  "$XSAPPNAME.force_guest"
+		]
+	  }
+	],
+	"role-collections": [
+	  {
+		"name": "JediOrder",
+		"description": "Members of the Jedi Order with reading privileges.",
+		"role-template-references": [
+		  "$XSAPPNAME.jedi_knight"
+		]
+	  },
+	  {
+		"name": "SithEmpire",
+		"description": "Sith with the ability to edit archives.",
+		"role-template-references": [
+		  "$XSAPPNAME.sith_lord"
+		]
+	  },
+	  {
+		"name": "ImperialCommand",
+		"description": "Administrators with full control.",
+		"role-template-references": [
+		  "$XSAPPNAME.emperor"
+		]
+	  },
+	  {
+		"name": "RebelAlliance",
+		"description": "Rebels with access to public information.",
+		"role-template-references": [
+		  "$XSAPPNAME.rebel_agent"
+		]
+	  }
+	],
+	"oauth2-configuration": {
+	  "redirect-uris": [
+		"https://frontendgroupxx.cfapps.us10-001.hana.ondemand.com/**"
+	  ]
+	}
+  }
+  

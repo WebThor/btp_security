@@ -1,0 +1,36 @@
+{
+  "welcomeFile": "/index.html",
+  "routes": [
+    {
+      "source": "^/resources/(.*)",
+      "target": "/$1",
+      "localDir": "./resources",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/products(.*)",
+      "target": "/products$1",
+      "destination": "products-destination",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/static/(.*)",
+      "target": "/static/$1",
+      "destination": "products-destination",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/$",
+      "target": "/index.html",
+      "destination": "products-destination",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)",
+      "target": "/$1",
+      "destination": "products-destination",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}
