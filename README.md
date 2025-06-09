@@ -79,7 +79,7 @@ Before you can clone a github.com GitHub repository into your SAP Business Techn
  
 3. In the terminal, enter:
    ```bash
-   git clone https://github.com/<YourUserName>/btp_security.git
+   git clone https://github.com/WebThor/btp_security.git
    ```
 4. Open the newly created directory in the development environment by clicking on the three lines at the top left, selecting **File > Open Folder...**, choosing the `btp_security` folder, and clicking OK. Trust the directory if prompted and open the terminal again, if it is now closed. ![FolderOpen](images/OpenFolder.png)
 5. You should now see the folder structure on the left side of your development environment. ![CurrentLayout](images/currentLayout.png)
