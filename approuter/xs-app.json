@@ -2,6 +2,18 @@
   "welcomeFile": "/index.html",
   "routes": [
     {
+      "source": "^/guess$",
+      "target": "/guess",
+      "destination": "products-destination",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/internal/secret$",
+      "target": "/internal/secret",
+      "destination": "products-destination",
+      "authenticationType": "none"
+    },
+    {
       "source": "^/resources/(.*)",
       "target": "/$1",
       "localDir": "./resources",

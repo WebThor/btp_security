@@ -5,7 +5,7 @@ applications:
   memory: 128M
   random-route: true
   routes:
-    - route: backendGroupxx.cfapps.us10-001.hana.ondemand.com
+    - route: backendGroup99.cfapps.us10-001.hana.ondemand.com
   path: ./backend
   buildpacks:
     - nodejs_buildpack  
@@ -17,7 +17,7 @@ applications:
 - name: approuter
   random-route: true
   routes:
-    - route: frontendGroupxx.cfapps.us10-001.hana.ondemand.com
+    - route: frontendGroup99.cfapps.us10-001.hana.ondemand.com
   path: ./approuter
   buildpacks:
     - nodejs_buildpack
@@ -28,6 +28,6 @@ applications:
     destinations: >
       [
         {"name":"products-destination",
-         "url":"https://backendGroupxx.cfapps.us10-001.hana.ondemand.com",
+         "url":"https://backendGroup99.cfapps.us10-001.hana.ondemand.com",
          "forwardAuthToken": true}
       ]

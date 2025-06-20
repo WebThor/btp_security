@@ -107,3 +107,4 @@ In this task, you will deploy the **SAP Cloud Identity Services (CIS)**, connect
 
 ---
 
+If everything worked for you, continue with the final fun challange [Task 6](./Task6.md)

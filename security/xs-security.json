@@ -81,7 +81,7 @@
 	],
 	"oauth2-configuration": {
 	  "redirect-uris": [
-		"https://frontendgroupxx.cfapps.us10-001.hana.ondemand.com/**"
+		"https://frontendgroup99.cfapps.us10-001.hana.ondemand.com/**"
 	  ]
 	}
   }

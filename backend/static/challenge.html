@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Zahlen-Challenge</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: 40px auto; }
+    input, button { font-size: 1em; margin-top: 10px; }
+    #response { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Zahlen-Challenge</h1>
+  <p>
+    Gib eine Zahl ein – du hast 10 Versuche, dann ist für 20 Sekunden gesperrt.<br>
+    Aber vielleicht gibt es ja einen Trick...?
+  </p>
+  <input type="number" id="number" placeholder="Zahl eingeben" required>
+  <button onclick="guess()">Absenden</button>
+  <div id="response"></div>
+  <script>
+    async function guess() {
+      const num = document.getElementById('number').value;
+      const res = await fetch('/guess', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ number: num })
+      });
+      document.getElementById('response').innerText = await res.text();
+    }
+  </script>
+</body>
+</html>
