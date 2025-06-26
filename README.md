@@ -259,6 +259,7 @@ If you go to the URL, you can see the products, but you cannot add or delete the
  3. [Task 3](/tasks/Task3.md)
  4. [Task 4](/tasks/Task4.md)
  5. [Task 5](/tasks/Task5.md)
+ 6. [Task 6](/tasks/Task6.md)
  
 
 ## Further References for the Tasks
